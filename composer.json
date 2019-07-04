@@ -10,14 +10,10 @@
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
-<<<<<<< HEAD
-        "laravel/framework": "5.8.*", 
-        "laravel/tinker": "^1.0",
-=======
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0", 
->>>>>>> 7da504d92b88a11aaeb6318659bc559edf98bcdf
-        "laravel/nova": "*"
+        "laravel/tinker": "^1.0",
+        "tcg/voyager": "^1.2",
+        "test-hook": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -51,12 +47,16 @@
             "Tests\\": "tests/"
         }
     },
-    "repositories": [
-    {
-        "type": "path",
-        "url": "./nova"
-    }
-    ],
+    "repositories": {
+        "0": {
+            "type": "path",
+            "url": "./nova"
+        },
+        "hooks": {
+            "type": "composer",
+            "url": "https://larapack.io"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
